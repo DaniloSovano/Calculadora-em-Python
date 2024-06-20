@@ -1,0 +1,82 @@
+calculator = """
+ _________________
+|  _____________  |
+| |_CALCULADORA_| |
+| |             | |
+| | x² √  CE  C | |
+| | 7  8  9   / | |
+| | 4  5  6   * | |
+| | 1  2  3   - | |
+| | 0  .  =   + | |
+| |_____________| |
+|_________________|
+    """
+print(calculator)
+
+
+def soma(a, b):
+    soma = a + b
+    return soma
+
+def subtracao(a, b):
+    sub = a-b
+    return sub
+
+
+def multiplicacao(a, b):
+    mult = a * b
+    return mult
+
+
+def divisao(a, b):
+    div = a/b
+    return div
+
+def operaçoes():
+  print("""Escolha sua  Opção
+
+  1: Soma
+  2: Subtração
+  3: Multiplicação
+  4: Divisão
+  5: sair""")
+
+
+operaçoes()
+categoria = int(input("\nEscolha uma categoria: "))
+while 0 < categoria <= 5 :
+
+    if categoria == 1:
+      print("\nVocê escolheu SOMA")
+      num1 = int(input('Digite o primeiro numero: '))
+      num2 = int(input('Digite o segundo numero: '))
+      print(f'O Resultado da soma de {num1} + {num2} é {soma(num1,num2)}')
+      break
+
+    elif categoria == 2:
+      print("\nVocê escolheu SUBTRAÇÃO")
+      num1 = int(input('Digite o primeiro numero: '))
+      num2 = int(input('Digite o segundo numero: '))
+      print(f'O Resultado da subtração de {num1} - {num2} é ')
+      break
+
+    elif categoria == 3:
+      print("\nVocê escolheu MULTIPLICAÇÃO")
+      num1 = int(input('Digite o primeiro numero: '))
+      num2 = int(input('Digite o segundo numero: '))
+      print(f'O Resultado da multiplicação de {num1} X {num2} é {multiplicacao(num1,num2)}  ')
+      break
+
+    elif categoria == 4:
+      print("\nVocê escolheu DIVISÃO")
+      num1 = int(input('Digite o primeiro numero: '))
+      num2 = int(input('Digite o segundo numero: '))
+      print(f' O Resultado da divisão {num1} / {num2} é {divisao(num1,num2)} ')
+      break
+
+    elif categoria == 5:
+      print("Obrigado por usar a calculadora! ")
+      break
+
+else:
+  print("Opção invalida")
